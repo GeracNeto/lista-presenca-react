@@ -3,6 +3,8 @@ import './style.css';
 import {Card} from '../../components/Card'; // Importanto componente criado
 import { useState, useEffect } from 'react'; // lib que perimete a criação de estados
 
+let count = 0;
+
 export function Home() {
 
   const [studentName, setStudentName] = useState(); // studentName = estado atual. setStudentName = função que altera o estado. Dentro do useState(Valor incial)
@@ -20,7 +22,15 @@ export function Home() {
     };
 
     setStudents(prevState => [...prevState, newStudant]); // Isso faz com que se crie um vetor sem perder o que foi adicionado antes. O prevState podia ser outro nome
+    count++;
+    console.log(count);
   }
+
+  function removeName(){
+
+    //return setStudents(students.splice(1));
+  }
+
 
   useEffect(() => {
     fetch('https://api.github.com/users/Geracneto').then(response => response.json()).then(data => {
@@ -57,8 +67,8 @@ export function Home() {
       {
         students.map(item => 
         <div className='card-button'>
-        <Card key={item.time} name={item.name} time={item.time}/>
-        <button>X</button>
+          <Card key={item.time} name={item.name} time={item.time}/>
+          <button onClick={removeName}>X</button>
         </div>
         ) // Para cada estudante, renderiza um Card. A propriedade key serve apenas para identificar e não dar erro no console log
       }
