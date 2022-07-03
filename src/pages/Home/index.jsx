@@ -41,8 +41,8 @@ export function Home() {
         <strong>{user.name}</strong>
         <img src={user.avatar}/>
       </div>
-    
     </header>
+    
       <input 
       type="text" 
       placeholder="Digite o nome..." 
