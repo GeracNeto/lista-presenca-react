@@ -55,7 +55,12 @@ export function Home() {
       </button>
 
       {
-        students.map(item => <Card key={item.time} name={item.name} time={item.time}/>) // Para cada estudante, renderiza um Card. A propriedade key serve apenas para identificar e não dar erro no console log
+        students.map(item => 
+        <div className='card-button'>
+        <Card key={item.time} name={item.name} time={item.time}/>
+        <button>X</button>
+        </div>
+        ) // Para cada estudante, renderiza um Card. A propriedade key serve apenas para identificar e não dar erro no console log
       }
     </div>
   )

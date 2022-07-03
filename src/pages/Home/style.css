@@ -58,3 +58,21 @@
     filter: brightness(0.9);
 }
 
+.card-button{
+    display: flex;
+    width: 50%;
+    align-items: baseline;
+    justify-content: stretch;
+}
+
+.card-button button{
+    width: 10%;
+    height: 50px;
+
+    border-radius: 10px;
+    border: none;
+    background-color:#f4684a;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 18px;
+}
