@@ -1,7 +1,7 @@
 
 .card{
-    height: 100px;
-    width: 50%;
+    height: 50px;
+    width: 90%;
 
     background: #735bf2;
     color: #FFF;
@@ -18,10 +18,4 @@
 .card strong{
     font-size: 20px;
 }
-
-.card button{
-    font-size: 20px;
-    width: 30px;
-}
-
 
