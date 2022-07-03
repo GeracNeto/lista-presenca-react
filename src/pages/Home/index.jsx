@@ -50,7 +50,7 @@ export function Home() {
       />
 
 
-      <button type="button" onClick={handleAddStudent}> 
+      <button id="button-home" type="button" onClick={handleAddStudent}> 
       Adicionar
       </button>
 
