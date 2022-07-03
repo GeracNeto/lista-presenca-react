@@ -6,7 +6,6 @@ export function Card({name, time}){
         <div className='card'>
             <strong>{name}</strong>
             <small>{time}</small>
-            <button>X</button>
         </div>
     )
 }
